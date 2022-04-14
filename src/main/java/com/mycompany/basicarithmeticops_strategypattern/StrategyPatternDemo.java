@@ -14,14 +14,14 @@ public class StrategyPatternDemo {
 		  float value1=Float.parseFloat(br.readLine());
 		  System.out.print("Enter the second value: ");
 		  float value2=Float.parseFloat(br.readLine());
-	      Context context = new Context(new Addition());		
-	      System.out.println("Addition = " + context.executeStrategy(value1, value2));
+	      		
+	      System.out.println("Addition = " + new Context(new Addition()).executeStrategy(value1, value2));
 
-	      context = new Context(new Subtraction());		
-	      System.out.println("Subtraction = " + context.executeStrategy(value1, value2));
+              
+	      System.out.println("Subtraction = " + new Context(new Subtraction()).executeStrategy(value1, value2));
 
-	      context = new Context(new Multiplication());		
-	      System.out.println("Multiplication = " + context.executeStrategy(value1, value2));
+	
+	      System.out.println("Multiplication = " + new Context(new Multiplication()).executeStrategy(value1, value2));
 	   }
 
 }
